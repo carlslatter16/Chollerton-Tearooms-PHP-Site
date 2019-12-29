@@ -1,0 +1,388 @@
+/*Indended for chrome mainly, with javascript i'd add legacy support, and compatability*/
+
+/*Navigation Bar CSS-------------------------------------------------------------------------------------------------------*/
+
+nav
+{
+	z-index: 1;		   /*Used to bring the nav bar in front of everything*/
+	position: fixed;   /*Used to keep nav at the top all the time*/
+}
+
+nav ul /*CSS to style the boxes the text is in*/
+{
+	list-style-type: none;	 /*Removes bullet points*/
+}
+
+nav li a  /*CSS to style the actual text of the nav bar*/
+{
+	padding: 14px;				    /*CSS to pad out the boxes of the nav bar*/
+	font-family: Helvetica, Arial;	/*I use a backup font just in case*/
+	text-decoration: none; 			/*Removes the underlines on the links*/
+	display: block;					/*Used to block out the text properly into the nav*/
+	margin-left: 25px; 				/*Used in conjunction with logo margin to have the nav links be centralised*/
+}
+
+#logo  /*This CSS is used to position the logo properly*/
+{
+	margin-left: 10px;
+	margin-right: 20%; 		/*This is used to keep the nav centralised, but along with the margin earlier, that it is not dependant on this*/
+	margin-bottom: 5px;
+	padding-top: 5px;
+	height: 5%; 			/*Standard height/width CSS*/
+	width: 8%;
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------*/
+
+/*Banner Section CSS-------------------------------------------------------------------------------------------------------*/
+
+#toplayer img:hover:not(.overlay) 	/*Functionality set up for future links using the banner*/
+{
+	z-index: -1;	/*Used to keep this behind the nav bar*/
+	opacity: 1;		/*Used along with the opacity below, to ensure that the banner can be 'focused' on, for future linking to home page in the future*/
+}
+
+#toplayer img
+{
+	opacity: 0.95; /*See above*/
+}
+
+#toplayer h1	/*Code for making my title stand out and be eye catching to the user*/
+{
+	padding-top: 10px;
+	padding-bottom: 10px;							/*To make the text and box look better*/
+	font-size: 100px;						/*For the big text*/
+    left: 50%;								/*Purely for positioning*/
+    transform: translate(-50%, -50%); 		/*Purely for positioning*/
+    background-color: #2C1901;				/*The nice chocolate like colour, which fits well*/
+    font-family: "Berkshire Swash", Arial;	/*Imported font because it really fits well, with a backup for compatibility*/
+    position: relative;						/*Purely for positioning*/
+}
+
+#banner		/*Setting the height and width of the banner image*/
+{
+	height: 400px;  /*Height of the image*/
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------*/
+
+/*Main Section CSS----------------------------------------------------------------------------------------------------------*/
+
+main
+{
+	width: 75%;					/*The width of the main element*/
+	background-color: #ffddaf;	/*A nice cream colour that is relevant but slightly different to the body background*/
+	overflow-x:auto;
+}
+
+article
+{
+	margin-top: 20px;			/*Adds the margin for the main to be visable*/
+	margin-bottom: 20px;
+	margin-left: 20px;
+}
+
+article p
+{
+	font-size: 1.1vw;	/*My prefered metric as it scales quite nicely*/
+	padding-left: 30px;	 /*Generic Padding*/
+	padding-right: 30px;
+}
+
+article h2
+{
+	margin-left: 20px;	/*Purely for positioning*/
+}
+
+aside
+{
+	font-size: 1.05vw;		/*My prefered metric as it scales quite nicely*/
+	margin-bottom: 20px;	/*Purely for positioning*/
+	padding-right: 30px;	/*Generic Padding*/
+	padding-left: 30px;		/*Generic Padding*/
+	text-align: center;		/*For the aside, it looks much better centralised*/
+}
+
+h3
+{
+	text-decoration: underline;		/*Adds the desired underlines to all h3 tags*/
+}
+
+body
+{
+	background-image: url("background.jpg");   /*I adapted file I found online, into the style that this needs*/
+    background-repeat: repeat;		     	   /*I made it tile to actually cover the whole body nicely*/
+}
+
+.wrapperAlt
+{
+	display: flex;					/*Creates a flex box for the image and text*/
+	flex-direction: row-reverse;	/*Ensures the flex is a reversed row for stylization*/
+}
+
+.images
+{
+	height: 85%;			/*Generic height/width of all the article images*/
+	width: 25%;
+	margin-left: 20px;		/*Purely for positioning*/
+	margin-right: 20px;
+	margin-bottom: 20px;
+}
+
+#information
+{
+	width: 50%;				/*I want the width to be half of the main*/
+	margin: 55px 20px;			/*Purely for positioning*/
+}
+
+section aside ul
+{
+	list-style-type: none; /*Removes the bullet points*/
+}
+
+form
+{
+	text-align: left;			/*Form postitioning and sizing*/
+	width: 96%;
+	margin-left: 20px;
+}
+
+article.creditinfo		/*Stylization*/
+{
+	padding: 20px;
+}
+
+form input[type=text] /*Purely for text only fields*/
+{
+	float:right;
+	width: 100%;
+	padding: 10px 0px 10px;
+	margin-right: 5px;
+}
+
+table		/*Table Sizing*/
+{
+	width: 100%;
+	order: 1;
+}
+
+table,th,td		/*Borders for table, columns and rows*/
+{
+		border: 1px solid black;
+		border-collapse: collapse;
+}
+
+th		/*To make the fields biggger*/
+{
+	height: 25px;
+}
+
+th, td	/*To make the fields biggger*/
+{
+	padding: 10px;
+}
+
+tr:nth-child(even)	/*To make every over record have a different background color for stylization*/
+{
+	background-color: #f7cb8c;
+}
+
+input /*To keep things from being too close*/
+{
+	margin-bottom: 15px;
+}
+
+h4
+{
+	margin: 10px 0px;
+}
+
+.creditinfo
+{
+	display: flex;					/*Creates a flex box for the text*/
+	flex-direction: column;
+}
+
+.icons
+{
+	height: 80px;		/*Prevents images being overly large*/
+	width: 80px;
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------*/
+
+/*Footer CSS---------------------------------------------------------------------------------------------------------------*/
+
+footer
+{
+   height: 55px; /*Height of the footer*/
+}
+
+footer h4
+{
+	padding-top: 15px;	/*Generic Padding*/
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------*/
+
+
+/*None Specific Dupe CSS---------------------------------------------------------------------------------------------------*/
+
+/*Here I attempt to avoid repetition as much as I can see*/
+
+nav li a:hover:not(.active), .active
+{
+	background-color: #562a0e; 	/*Means that both the current page, and hovered link will be a different colour to the nav bar*/
+}
+
+nav, footer
+{
+	background-color: #3E1404; 	/*A nice brown colour for both the nav and the footer*/
+}
+
+article, main img, aside, main
+{
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 	/*A shadow to add depth the the described elements*/
+}
+
+article, aside
+{
+	background-color: #f7e8d9;   /*A colour that is not as strong as white, but again, relevant to the traditonal context*/
+}
+
+#toplayer h1,nav ul, footer, body, article p
+{
+	margin: 0; 	  		/*Removes undeeded gaps*/
+}
+
+#toplayer h1, main
+{
+	margin: auto;    	/*Adds some extra padding on the code I actually want*/
+}
+
+#toplayer h1, footer h4, nav li a
+{
+	text-align: center /*Generic centering*/
+}
+
+#logo,.images, nav li, article
+{
+	float: left; 	   /*These elements need to be on the 'left' to function properly*/
+}
+
+#toplayer, nav li a, footer h4
+{
+	color: white; 	  /*Coloured white for contrast*/
+}
+
+#banner,article,footer,nav
+{
+	width: 100%;      /*Width of 100% of each elements parent, or if it is the parent, iself*/
+}
+
+#information, footer, h2, article p, form
+{
+	font-family: Arial; 	  /*Font that is compatiable with many devices and look good*/
+}
+
+#information, article
+{
+	flex-direction: column;  /*Used to create columns for both the rows of article and the text for #information*/
+	display: flex;
+}
+
+main table, main h3
+{
+	flex-direction: column;  /*Used to create columns for both the rows of article and the text for #information*/
+	display: flex;
+}
+
+.wrapper, main
+{
+	display: flex;			/*Creates a flex box for the image and text, and the article and #information child elements of main*/
+	flex-direction: row;	/*Standard row functionaliy*/
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------*/
+
+/*Media Queries------------------------------------------------------------------------------------------------------------*/
+
+/*Here I create 2 sets of media queries, 1 set for actual devices, and 1 set for changing the window size*/
+
+@media screen and (min-device-width: 1000px) and (max-device-width: 1366px) /*Laptop Size (Device Specific)*/
+{
+	#logo
+	{
+		margin-right: 12.5%;  /*This is used to keep the nav centralised*/
+	}
+}
+
+@media screen and (min-width: 1001px) and (max-width: 1365px) /*Laptop Size (None Device Specific (Generic))*/
+{
+	nav ul
+	{
+		margin-left: 15%;	  /*Purely for positioning*/
+	}
+
+	article p
+	{
+		font-size: 1.5vw;	  /*My prefered metric as it scales quite nicely*/
+	}
+
+	article
+	{
+		margin-right: 20px;	  /*Added to fix the right side not having a margin, since that is not wanted on desktop*/
+
+	}
+
+	#information, #logo
+	{
+		display: none;		  /*Hides the elements that aren't needed in this view*/
+	}
+}
+
+@media screen and (min-width: 1px) and (max-width: 999px) /*Mobile Size(Not Device Specific (Generic))*/
+{
+	nav ul
+	{
+		margin-left: -10%;		/*An offset to keep the mobile nav centered*/
+	}
+
+	nav li
+	{
+		float: none;			/*Used to create the nice mobile nav column view*/
+		text-align: center;		/*Nice alignment*/
+	}
+
+	nav li a
+	{
+		margin: 0;				/*Purely for positioning*/
+		font-size: 2.5vw;		/*My prefered metric as it scales quite nicely*/
+	}
+
+	article, nav li, nav li a
+	{
+		width: 100%;			/*Width of 100% of each elements parent, or if it is the parent, iself*/
+	}
+
+	article
+	{
+		margin-right: 20px;		/*Added to fix the right side not having a margin, since that is not wanted on desktop*/
+	}
+
+	article p
+	{
+		font-size: 2vw;			/*My prefered metric as it scales quite nicely*/
+	}
+
+	footer
+	{
+		bottom: 0;				/*Purely for positioning*/
+	}
+
+	#information, #logo
+	{
+		display: none;			/*Hides the elements that aren't needed in this view*/
+	}
+}
+/*-------------------------------------------------------------------------------------------------------------------------*/
